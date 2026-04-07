@@ -1,0 +1,1 @@
+# 0613-A06---Lectura-de-dades
