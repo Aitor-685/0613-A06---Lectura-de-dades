@@ -14,6 +14,7 @@
             <a href="?pagina=totes" <?php echo (!isset($_GET['pagina']) || $_GET['pagina'] === 'totes') ? 'class="active"' : ''; ?>>Totes les nòtícies</a>
             <a href="?pagina=cultura" <?php echo (isset($_GET['pagina']) && $_GET['pagina'] === 'cultura') ? 'class="active"' : ''; ?>>Cultura</a>
             <a href="?pagina=febrer" <?php echo (isset($_GET['pagina']) && $_GET['pagina'] === 'febrer') ? 'class="active"' : ''; ?>>Febrer</a>
+            <a href="?pagina=numero-febrer" <?php echo (isset($_GET['pagina']) && $_GET['pagina'] === 'numero-febrer') ? 'class="active"' : ''; ?>>Número de notícies de Febrer</a>
         </div>
         
         <div class="content">
@@ -31,6 +32,9 @@
                     break;
                 case 'febrer':
                     $archivo = 'paginas/veureNoticiesFebrer.php';
+                    break;
+                case 'numero-febrer':
+                    $archivo = 'paginas/numeroNoticiesFebrer.php';
                     break;
             }
             
