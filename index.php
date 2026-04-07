@@ -13,6 +13,7 @@
         <div class="menu">
             <a href="?pagina=totes" <?php echo (!isset($_GET['pagina']) || $_GET['pagina'] === 'totes') ? 'class="active"' : ''; ?>>Totes les nòtícies</a>
             <a href="?pagina=cultura" <?php echo (isset($_GET['pagina']) && $_GET['pagina'] === 'cultura') ? 'class="active"' : ''; ?>>Cultura</a>
+            <a href="?pagina=febrer" <?php echo (isset($_GET['pagina']) && $_GET['pagina'] === 'febrer') ? 'class="active"' : ''; ?>>Febrer</a>
         </div>
         
         <div class="content">
@@ -27,6 +28,9 @@
                 case 'totes':
                 default:
                     $archivo = 'paginas/veureTotesLesNoticies.php';
+                    break;
+                case 'febrer':
+                    $archivo = 'paginas/veureNoticiesFebrer.php';
                     break;
             }
             
