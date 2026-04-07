@@ -5,9 +5,8 @@ $db_path = dirname(__DIR__) . '/base_dades/diariLocal.db';
 
 @$db = new SQLite3($db_path);
 
-
-$resultat = $db->query("SELECT * FROM noticies ORDER BY not_data DESC");
-
+// Obtenir les nòtícies de cultura ordenades de més nova a més antiga
+$resultat = $db->query("SELECT * FROM noticies WHERE not_seccio = 'Cultura' ORDER BY not_data DESC");
 
 // Mostrar les nòtícies
 $count = 0;
@@ -25,7 +24,7 @@ while ($noticia = $resultat->fetchArray(SQLITE3_ASSOC)) {
 }
 
 if ($count === 0) {
-    echo "<div class='error'> No hi ha nòtícies disponibles.</div>";
+    echo "<div class='error'>No hi ha nòtícies de Cultura disponibles.</div>";
 }
 
 $db->close();
